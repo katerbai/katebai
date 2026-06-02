@@ -94,7 +94,7 @@ function ProjectCardDemo({ project }: { project: MockProject }) {
               +{hiddenCount} more
             </button>
           )}
-          {showAllTags && hiddenCount > 0 && (
+          {showAllTags && (
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); setShowAllTags(false); }}

@@ -20,8 +20,6 @@ function AnimBox({ className, label }: { className: string; label: string }) {
 }
 
 export default function MotionStory() {
-  const [cardKey, setCardKey] = useState(0);
-
   return (
     <StoryLayout
       title="Motion"

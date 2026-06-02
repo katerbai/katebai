@@ -39,7 +39,8 @@ export default function App() {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
 
-  const ActiveStory = STORIES.find((s) => s.id === active)?.component ?? ColorsStory;
+  const activeStory = STORIES.find((s) => s.id === active) ?? STORIES[0];
+  const ActiveStory = activeStory.component;
 
   return (
     <div className="flex h-screen overflow-hidden bg-background text-foreground">
@@ -137,7 +138,7 @@ export default function App() {
             <span>Kate Baillargeon</span>
             <ChevronRight className="h-3 w-3" />
             <span className="font-medium text-foreground">
-              {STORIES.find((s) => s.id === active)?.label}
+              {activeStory.label}
             </span>
           </div>
         </header>
