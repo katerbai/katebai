@@ -19,12 +19,14 @@ export default function LayoutStory() {
         <div className="w-full">
           <div className="glass rounded-2xl">
             <nav className="flex items-center justify-between px-6 py-4" aria-label="Main navigation">
-              {/* KB logo */}
+              {/* KB logo — matches TopNav exactly */}
               <div
-                className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 hover:scale-105"
                 style={{
-                  backgroundImage: "linear-gradient(135deg, hsl(333, 71%, 50%), hsl(30, 80%, 60%))",
                   border: "2px solid transparent",
+                  backgroundImage: "linear-gradient(hsl(var(--card)), hsl(var(--card))), linear-gradient(135deg, hsl(333, 71%, 50%), hsl(30, 80%, 60%))",
+                  backgroundOrigin: "border-box",
+                  backgroundClip: "padding-box, border-box",
                 }}
                 aria-label="Kate Baillargeon — Home"
               >
