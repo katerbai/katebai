@@ -8,7 +8,7 @@ interface StoryLayoutProps {
 
 export function StoryLayout({ title, description, children }: StoryLayoutProps) {
   return (
-    <div className="mx-auto max-w-5xl px-8 py-10">
+    <div className="mx-auto max-w-5xl px-4 sm:px-8 py-10">
       <div className="mb-10 border-b border-border/50 pb-6">
         <p className="section-title">Component</p>
         <h1 className="font-serif text-4xl font-bold text-foreground">{title}</h1>
@@ -40,7 +40,7 @@ export function StoryBlock({ title, description, code, children, canvas = "auto"
           canvas === "checkered" && "bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZjBmMGYwIi8+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNmMGYwZjAiLz48L3N2Zz4=')]"
         )}
       >
-        <div className="flex min-h-[120px] flex-wrap items-center justify-center gap-4 p-8">
+        <div className="flex min-h-[120px] flex-wrap items-center justify-center gap-4 p-4 sm:p-8">
           {children}
         </div>
         {code && (
