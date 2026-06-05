@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import {
   Palette, Type, Square, Tag, LayoutGrid, MousePointer2,
   ToggleLeft, AlignLeft, Layers, Sliders, ChevronRight,
-  Sun, Moon, Menu, X
+  Sun, Moon, Menu, X, Smartphone
 } from "lucide-react";
 
 import ColorsStory from "@/stories/ColorsStory";
@@ -16,6 +16,7 @@ import FormStory from "@/stories/FormStory";
 import FeedbackStory from "@/stories/FeedbackStory";
 import LayoutStory from "@/stories/LayoutStory";
 import MotionStory from "@/stories/MotionStory";
+import ResponsivenessStory from "@/stories/ResponsivenessStory";
 
 const STORIES = [
   { id: "colors", label: "Colors", icon: Palette, component: ColorsStory },
@@ -28,10 +29,12 @@ const STORIES = [
   { id: "feedback", label: "Feedback", icon: ToggleLeft, component: FeedbackStory },
   { id: "layout", label: "Layout & Nav", icon: Layers, component: LayoutStory },
   { id: "motion", label: "Motion", icon: Sliders, component: MotionStory },
+  { id: "responsiveness", label: "Responsiveness", icon: Smartphone, component: ResponsivenessStory },
 ];
 
 export default function App() {
-  const [active, setActive] = useState("colors");
+  const initialStory = new URLSearchParams(window.location.search).get("story") || "colors";
+  const [active, setActive] = useState(initialStory);
   const [dark, setDark] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
