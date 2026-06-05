@@ -80,7 +80,7 @@ export default function BadgeStory() {
         </div>
       </StoryBlock>
 
-      <StoryBlock title="About page — Expertise tags" description="On the About page, expertise tags use the same bg-primary text-primary-foreground pink style as project tags — not gray. The DESIGN_SYSTEM.md doc was incorrect; the live site is the source of truth.">
+      <StoryBlock title="About page — Expertise tags" description="Expertise tags on the About page use bg-primary text-primary-foreground — the same pink pill style as all other skill tags across the site.">
         <div className="w-full">
           <p className="section-title mb-3">Expertise</p>
           <div className="flex flex-wrap gap-2">
