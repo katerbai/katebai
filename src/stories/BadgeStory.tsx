@@ -80,13 +80,20 @@ export default function BadgeStory() {
         </div>
       </StoryBlock>
 
-      <StoryBlock title="About page tags — muted gray" description="On the About page only, tags use bg-muted text-muted-foreground (never pink).">
-        <div className="flex flex-wrap gap-2 justify-center">
-          {["Design Systems", "Accessibility", "Figma", "Mentorship"].map((tag) => (
-            <span key={tag} className="bg-muted text-muted-foreground text-xs font-medium px-2.5 py-1 rounded-full">
-              {tag}
-            </span>
-          ))}
+      <StoryBlock title="About page — Expertise tags" description="On the About page, expertise tags use the same bg-primary text-primary-foreground pink style as project tags — not gray. The DESIGN_SYSTEM.md doc was incorrect; the live site is the source of truth.">
+        <div className="w-full">
+          <p className="section-title mb-3">Expertise</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Design Systems", "Component Libraries", "Design Thinking", "Figma",
+              "React Components", "Accessibility", "Documentation", "Design Ops",
+              "User Research", "Prototyping", "Mentorship and Connection"
+            ].map((tag) => (
+              <span key={tag} className="bg-primary text-primary-foreground text-xs font-medium px-2.5 py-1 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </StoryBlock>
     </StoryLayout>
