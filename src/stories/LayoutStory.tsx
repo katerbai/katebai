@@ -18,7 +18,7 @@ export default function LayoutStory() {
       <StoryBlock title="TopNav" description="Fixed glass header with KB monogram, nav links with underline-on-hover, and skip-to-main link as first focusable element.">
         <div className="w-full">
           <div className="glass rounded-2xl">
-            <nav className="flex items-center justify-between px-6 py-4" aria-label="Main navigation">
+            <nav className="flex items-center justify-between px-3 sm:px-6 py-4" aria-label="Main navigation">
               {/* KB logo — matches TopNav exactly */}
               <div
                 className="flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 hover:scale-105"
@@ -38,7 +38,7 @@ export default function LayoutStory() {
                 </span>
               </div>
 
-              <ul className="flex items-center gap-8">
+              <ul className="flex items-center gap-3 sm:gap-8">
                 {NAV_LINKS.map(({ label, active }) => (
                   <li key={label}>
                     <span
