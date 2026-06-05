@@ -7,6 +7,7 @@ const BREAKPOINTS = [
     prefix: "—",
     color: "bg-primary/15 border-primary/30",
     textColor: "text-primary",
+    bulletColor: "bg-primary",
     behaviors: [
       "Single-column layout throughout",
       "Sidebar hidden — hamburger menu opens a slide-in drawer",
@@ -23,6 +24,7 @@ const BREAKPOINTS = [
     prefix: "sm:",
     color: "bg-blue-500/10 border-blue-400/30",
     textColor: "text-blue-600 dark:text-blue-400",
+    bulletColor: "bg-blue-500",
     behaviors: [
       "TopNav links restored to full gap-8, px-6 spacing",
       "TokenRow HSL code moves to inline right-side column",
@@ -37,6 +39,7 @@ const BREAKPOINTS = [
     prefix: "md:",
     color: "bg-green-500/10 border-green-400/30",
     textColor: "text-green-700 dark:text-green-400",
+    bulletColor: "bg-green-600",
     behaviors: [
       "Sidebar always visible — no hamburger overlay",
       "Two-column grids unlock (md:grid-cols-2)",
@@ -50,6 +53,7 @@ const BREAKPOINTS = [
     prefix: "lg:",
     color: "bg-purple-500/10 border-purple-400/30",
     textColor: "text-purple-700 dark:text-purple-400",
+    bulletColor: "bg-purple-600",
     behaviors: [
       "Full desktop layout with max-w-5xl (1024px) content area",
       "Three-column grids (lg:grid-cols-3)",
@@ -114,7 +118,7 @@ export default function ResponsivenessStory() {
               <ul className="space-y-1.5">
                 {bp.behaviors.map((b) => (
                   <li key={b} className="flex items-start gap-2 text-sm text-foreground">
-                    <span className={`mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0 ${bp.textColor.replace("text-", "bg-")}`} />
+                    <span className={`mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0 ${bp.bulletColor}`} />
                     {b}
                   </li>
                 ))}
