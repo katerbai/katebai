@@ -67,22 +67,21 @@ export default function ColorsStory() {
         <div className="w-full space-y-2">
           {PROJECT_COLORS.map((c) => (
             <div key={c.label} className="flex items-center gap-4 rounded-xl border border-border/50 bg-card px-5 py-3">
-              <div className="h-10 w-10 flex-shrink-0 rounded-lg border border-border/30" style={{ background: c.swatch }} />
-              <div className="flex-1">
-                <p className="text-sm font-medium text-foreground">{c.label}</p>
+              <div className="h-10 w-10 flex-shrink-0 rounded-full border border-border/30" style={{ background: c.swatch }} />
+              <p className="w-44 flex-shrink-0 text-sm font-medium text-foreground">{c.label}</p>
+              <div className="flex flex-1 items-center justify-end gap-3">
+                <span
+                  className="rounded-full px-3 py-1 text-xs font-medium border border-solid"
+                  style={{
+                    backgroundColor: c.swatch.replace("hsl(", "hsla(").replace(")", ", 0.12)"),
+                    color: c.swatch,
+                    borderColor: c.swatch,
+                  }}
+                >
+                  2024
+                </span>
+                <code className="w-44 text-right font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">{c.value}</code>
               </div>
-              {/* Year badge preview */}
-              <span
-                className="rounded-full px-3 py-1 text-xs font-medium border border-solid"
-                style={{
-                  backgroundColor: c.swatch.replace("hsl(", "hsla(").replace(")", ", 0.12)"),
-                  color: c.swatch,
-                  borderColor: c.swatch,
-                }}
-              >
-                2024
-              </span>
-              <code className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">{c.value}</code>
             </div>
           ))}
         </div>
