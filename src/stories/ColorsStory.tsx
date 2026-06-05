@@ -68,8 +68,23 @@ export default function ColorsStory() {
           {PROJECT_COLORS.map((c) => (
             <div key={c.label} className="flex items-center rounded-xl border border-border/50 bg-card px-5 py-3">
               <div className="h-10 w-10 flex-shrink-0 rounded-full mr-4" style={{ background: c.swatch }} />
-              <p className="flex-1 min-w-0 text-sm font-medium text-foreground">{c.label}</p>
-              <div className="flex items-center gap-3 flex-shrink-0 ml-4 w-[240px] justify-start">
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-foreground">{c.label}</p>
+                <div className="mt-1.5 flex items-center gap-2 sm:hidden">
+                  <span
+                    className="flex-shrink-0 text-center rounded-full px-3 py-1 text-xs font-medium border border-solid"
+                    style={{
+                      backgroundColor: c.swatch.replace("hsl(", "hsla(").replace(")", ", 0.12)"),
+                      color: c.swatch,
+                      borderColor: c.swatch,
+                    }}
+                  >
+                    2024
+                  </span>
+                  <code className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full whitespace-nowrap">{c.value}</code>
+                </div>
+              </div>
+              <div className="hidden sm:flex items-center gap-3 flex-shrink-0 ml-4 w-[240px] justify-start">
                 <span
                   className="flex-shrink-0 text-center rounded-full px-3 py-1 text-xs font-medium border border-solid"
                   style={{

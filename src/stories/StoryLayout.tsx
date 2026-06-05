@@ -72,8 +72,11 @@ export function TokenRow({ label, value, swatch, description }: TokenRowProps) {
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-foreground">{label}</p>
         {description && <p className="text-xs text-muted-foreground">{description}</p>}
+        <code className="mt-1.5 inline-block sm:hidden font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+          {value}
+        </code>
       </div>
-      <code className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+      <code className="hidden sm:block flex-shrink-0 font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">
         {value}
       </code>
     </div>
