@@ -79,7 +79,7 @@ export default function ColorsStory() {
               >
                 2024
               </span>
-              <code className="w-40 flex-shrink-0 text-center font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">{c.value}</code>
+              <code className="flex-shrink-0 font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-full">{c.value}</code>
             </div>
           ))}
         </div>
